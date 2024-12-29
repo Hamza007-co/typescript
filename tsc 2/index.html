@@ -1,0 +1,149 @@
+<html>
+<head>
+    
+    <title>Pete's Pizza Delivery</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+        }
+        .container {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"] {
+            width: calc(50% - 10px);
+            padding: 5px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            box-sizing: border-box;
+        }
+        input[type="text"]:nth-child(2n), input[type="email"]:nth-child(2n) {
+            margin-right: 0;
+        }
+        .required {
+            color: red;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section label {
+            display: inline-block;
+            width: 100px;
+        }
+        .section input[type="radio"], .section input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .delivery-time {
+            width: 50px;
+            margin-right: 10px;
+        }
+        textarea {
+            width: calc(100% - 10px);
+            height: 100px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .submit-button {
+            text-align: center;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pete's Pizza Delivery</h1>
+        <h2>Online Order Form</h2>
+        <form>
+            <div class="section">
+                <label for="name">*Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="tel">*Tel:</label>
+                <input type="text" id="tel" name="tel" required>
+            </div>
+            <div class="section">
+                <label for="address">*Address:</label>
+                <input type="text" id="address" name="address" required>
+                <br>
+                <label for="email">*Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="section">
+                <label for="town">*Town/city:</label>
+                <input type="text" id="town" name="town" required>
+                <br>
+                <label for="postcode">*Postcode:</label>
+                <input type="number" id="postcode" name="postcode" required>
+            </div>
+            <p class="required">* required fields</p>
+            <div class="section">
+                <h2>Topping</h2>
+                <input type="radio" id="margherita" name="topping" value="margherita">
+                <label for="margherita">Margherita</label>
+                <input type="radio" id="four-seasons" name="topping" value="four-seasons">
+                <label for="four-seasons">Four Seasons</label>
+                <input type="radio" id="meat-feast" name="topping" value="meat-feast">
+                <label for="meat-feast">Meat Feast</label>
+            </div>
+            <div class="section">
+                <h2>Size</h2>
+                <input type="radio" id="small" name="size" value="small">
+                <label for="small">Small</label>
+                <input type="radio" id="medium" name="size" value="medium">
+                <label for="medium">Medium</label>
+                <input type="radio" id="large" name="size" value="large">
+                <label for="large">Large</label>
+            </div>
+            <div class="section">
+                <h2>Extras</h2>
+                <input type="checkbox" id="mushrooms" name="extras" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label>
+                <input type="checkbox" id="green-peppers" name="extras" value="green-peppers">
+                <label for="green-peppers">Green peppers</label>
+                <input type="checkbox" id="anchovies" name="extras" value="anchovies">
+                <label for="anchovies">Anchovies</label>
+                <input type="checkbox" id="extra-cheese" name="extras" value="extra-cheese">
+                <label for="extra-cheese">Extra cheese</label>
+            </div>
+            <div class="section">
+                <label for="delivery-time">Preferred delivery time:</label>
+                <input type="time" id="delivery-time" name="delivery-time" class="delivery-time">
+            </div>
+            <div class="section">
+                <label for="instructions">Delivery instructions:</label>
+                <textarea id="instructions" name="instructions"></textarea>
+            </div>
+          <button onclick="full_info()" class="submit-button">submit</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
